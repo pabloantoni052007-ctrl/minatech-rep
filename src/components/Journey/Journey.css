@@ -1,3 +1,4 @@
+
 .jornada-container {
   font-family: sans-serif;
   margin: auto;
@@ -6,9 +7,22 @@
 }
 
 .timeline {
+=======
+.journey-section {
+  background-color: var(--color-light);
+}
+
+.journey-description {
+  max-width: 720px;
+}
+
+.journey-timeline {
+  max-width: 900px;
+
   margin: 0 auto;
   position: relative;
 }
+
 
 .timeline::after {
   background-color: var(--primary-color);
@@ -95,3 +109,67 @@
     left: 21px !important;
   }
 }
+=======
+.journey-timeline::before {
+  content: "";
+  position: absolute;
+  left: 118px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(var(--color-primary), var(--color-secondary));
+}
+
+.journey-step {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 30px;
+  margin-bottom: 35px;
+  position: relative;
+}
+
+.journey-number {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: white;
+  padding: 12px 16px;
+  border-radius: 999px;
+  font-weight: 800;
+  height: fit-content;
+  text-align: center;
+  z-index: 2;
+}
+
+.journey-content {
+  background-color: white;
+  border-radius: var(--radius-medium);
+  padding: 28px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--color-border);
+}
+
+.journey-content h3 {
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.journey-content p {
+  color: var(--color-text);
+  line-height: 1.7;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .journey-timeline::before {
+    display: none;
+  }
+
+  .journey-step {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .journey-number {
+    width: fit-content;
+  }
+}
+

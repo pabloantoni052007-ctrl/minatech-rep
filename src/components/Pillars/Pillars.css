@@ -34,3 +34,51 @@
     grid-template-columns: 1fr;
   }
 }
+=======
+.pillars-section {
+  background-color: var(--color-white);
+}
+
+.pillars-description {
+  max-width: 720px;
+}
+
+.pillar-card {
+  height: 100%;
+  padding: 34px;
+  border-radius: var(--radius-medium);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-soft);
+  transition: 0.3s ease;
+}
+
+.pillar-card:hover {
+  transform: translateY(-8px);
+}
+
+.pillar-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+
+.pillar-icon i {
+  font-size: 1.8rem;
+}
+
+.pillar-card h3 {
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.pillar-card p {
+  color: var(--color-text);
+  line-height: 1.7;
+}
